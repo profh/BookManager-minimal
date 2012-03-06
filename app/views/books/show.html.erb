@@ -1,0 +1,40 @@
+<p>
+  <b>Title:</b>
+  <%= @book.title %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @book.category.name %>
+</p>
+
+<%= render 'list_of_authors' %>
+
+<p>
+  <b>Proposal date:</b>
+  <%= @book.proposal_date.strftime("%m/%d/%y") %>
+</p>
+
+<p>
+  <b>Contract date:</b>
+  <%= @book.contract_date.strftime("%m/%d/%y") unless @book.contract_date.nil? %>
+</p>
+
+<p>
+  <b>Published date:</b>
+  <%= @book.published_date.strftime("%m/%d/%y") unless @book.published_date.nil? %>
+</p> 
+
+<p>
+  <b>Units Sold:</b>
+  <%= number_with_delimiter @book.units_sold %>
+</p>
+
+<p>
+  <b>Notes:</b><br />
+  <%= @book.notes %>
+</p>
+
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>

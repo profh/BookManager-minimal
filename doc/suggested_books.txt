@@ -1,0 +1,38 @@
+Title:  Agile Web Development with Rails
+Year published: 2011
+Publisher: Pragmatic Bookshelf
+3 Authors
+    * Sam Ruby
+    * David Hannson
+    * Dave Thomas
+
+# ============================
+Title:  Romeo and Juliet
+Year published: 2004
+Publisher: Washington Square Press
+1 Author
+    * William Shakespeare
+
+# ============================
+Title:  King Lear
+Year published: 2004
+Publisher: Washington Square Press
+1 Author
+    * William Shakespeare
+
+# ============================
+Title:  The Divine Comedy
+Year published: 1995
+Publisher: Everyman's Library
+1 Author
+    * Dante Alighieri
+
+# ============================
+Title:  Pride and Prejudice
+Year published: 2001
+Publisher: Washington Square Press
+1 Author
+    * Jane Austen
+
+
+

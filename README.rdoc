@@ -1,0 +1,5 @@
+In the phase 3 instructions you are told to use Twitter Bootstrap (http://twitter.github.com/bootstrap/) for design help unless you have sufficient previous experience with CSS.  In lab 2 you built a simple HTML site with Bootstrap, but how do you incorporate it in a Rails project?  In this lab, you will get a chance to use Bootstrap in a project you should all be familiar with at this point.
+
+This is a version of BookManager without any styling or javascript.  The twitter-bootstrap-rails and simple_form gems have been included in their proper places in the Gemfile, but students will need to run 'bundle install' to get these gems installed on their own machines (and update the Gemfile.lock file).  To get the database populated with realistic sample data, run 'rake db:populate' on the command line. (Also note that one of the migrations creates a default user and password: 'admin'|'secret')
+
+After the gems are installed and the database created and populated, execute the lab instructions and build an improved version of BookManager.  There are also additional help files in the doc/ directory.

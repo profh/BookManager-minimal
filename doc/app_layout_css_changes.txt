@@ -1,0 +1,25 @@
+# ADD AFTER @import "twitter/bootstrap/bootstrap";
+
+body { 
+	padding-top: 60px; 
+	font-size: 12px;
+} 
+
+#footer {
+	margin-top: 17px;
+  padding-top: 17px;
+  border-top: 1px solid #eee;
+	background-color:#E6E6E6;
+	text-align: center;
+}
+
+.well {
+	line-height: 1.5;
+}
+
+.well li {
+	font-size: 130%;
+	line-height: 1.5;
+}
+
+# ADD BEFORE @import "twitter/bootstrap/responsive";

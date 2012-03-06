@@ -1,0 +1,19 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#">BookManager</a>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li><%= link_to "Books", books_path %></li>
+          <li><%= link_to "Authors", authors_path %></li>
+          <li><%= link_to "Categories", categories_path %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

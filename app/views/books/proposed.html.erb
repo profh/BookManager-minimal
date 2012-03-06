@@ -1,0 +1,25 @@
+<h2>Listing Proposed Books</h2>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Category</th>
+		<th>Proposal Date</th>
+		<th>Author (first)</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @books.each do |book| %>
+  <tr>
+    <td><%= link_to book.title, book_path(book) %></td>
+    <td><%= book.category.name %></td>
+		<td><%= book.proposal_date.strftime("%m/%d/%y") %></td>
+		<td><%= book.authors.alphabetical.first.name %></td>
+    <td><%= link_to 'Edit', edit_book_path(book) %></td>
+    <td><%= link_to 'Destroy', book, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

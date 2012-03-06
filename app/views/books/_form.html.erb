@@ -1,0 +1,64 @@
+<%= form_for(@book) do |f| %>
+	<%= hidden_field_tag "book[author_ids][]", nil%>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<table border="0" cellspacing="5" cellpadding="5">
+		<tr valign="top">
+			<td>
+				<h2>Book details:</h2>
+				<div class="field">
+			    <%= f.label :title %><br />
+			    <%= f.text_field :title %>
+			  </div>
+			  <div class="field">
+			    <%= f.label :category_id %><br />
+			    <%= f.collection_select :category_id, Category.alphabetical, :id, :name, :prompt => "Select ..." %>
+			  </div>
+
+				<div class="field">
+			    <%= f.label :proposal_date %><br />
+			    <%= f.date_select :proposal_date, :order => [:month, :day, :year] %>
+			  </div>
+
+				<div class="field">
+			    <%= f.label :contract_date %><br />
+			    <%= f.date_select :contract_date, :order => [:month, :day, :year], :prompt => true %>
+			  </div>
+
+				<div class="field">
+			    <%= f.label :published_date %><br />
+			    <%= f.date_select :published_date, :order => [:month, :day, :year], :prompt => true %>
+			  </div>
+			
+				<div class="field">
+			    <%= f.label :units_sold %><br />
+			    <%= f.text_field :units_sold %>
+			  </div>
+			
+				<div class="field">
+			    <%= f.label :notes %><br />
+			    <%= f.text_area :notes, :cols => 25, :rows => 10 %>
+			  </div>
+
+			  <div class="actions">
+			    <%= f.submit %>
+			  </div>
+			</td>
+			<td width="25">&nbsp;</td>
+			<td>
+				<h2>Add author(s):</h2>
+				<%= render :partial => 'authors_checkboxes' %>
+			</td>
+		</tr>
+	</table>
+<% end %>
