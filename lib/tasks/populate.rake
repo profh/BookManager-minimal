@@ -53,7 +53,7 @@ namespace :db do
       b.title = book[0]
       b.category_id = book[1]
       # decide book status
-      book_status = rand(1..6)
+      book_status = rand(5) + 1
       if book_status == 1
         # the book is proposed, but not under contract
         b.proposal_date = [5.weeks.ago, 4.weeks.ago, 3.weeks.ago, 1.week.ago].sample
